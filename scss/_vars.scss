@@ -1,13 +1,12 @@
 // Colors
-$bodyBg: hsl(216, 12%, 8%);
+$bodyBg: #121725;
 
-$primary: hsl(25, 97%, 53%);
-
-$white: hsl(0, 0%, 100%);
-$lightgrey: hsl(217, 12%, 63%);
-$mediumgrey: hsl(216, 12%, 54%);
-$darkblue: hsl(213, 19%, 18%);
-$verydarkblue: hsl(216, 12%, 8%);
+$uiColor: #54e6af;
+$whiteColor: hsl(0, 0%, 100%);
+$darkColor: #121725;
+$uiBgColor: #2c344b;
+$uiTextColor: #5a668a;
+$textColor: #c2cbe5;
 
 //Attribution
 $attr_text-color: hsl(248, 32%, 49%);
@@ -15,6 +14,14 @@ $attr_grifano-color: #fff;
 $attr_span: hsl(249, 10%, 26%);
 
 // Typeface
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
-$fontFamily: "Overpass", sans-serif;
-$mainFontSize: 15px;
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;900&display=swap");
+$fontFamily: "Chivo", sans-serif;
+$mainFontSize: 18px;
+@mixin bodyText {
+  font-size: 18px;
+  line-height: 28px;
+}
+@mixin uiText {
+  font-size: 14px;
+  line-height: 28px;
+}
