@@ -1,0 +1,20 @@
+// Colors
+$bodyBg: hsl(216, 12%, 8%);
+
+$primary: hsl(25, 97%, 53%);
+
+$white: hsl(0, 0%, 100%);
+$lightgrey: hsl(217, 12%, 63%);
+$mediumgrey: hsl(216, 12%, 54%);
+$darkblue: hsl(213, 19%, 18%);
+$verydarkblue: hsl(216, 12%, 8%);
+
+//Attribution
+$attr_text-color: hsl(248, 32%, 49%);
+$attr_grifano-color: #fff;
+$attr_span: hsl(249, 10%, 26%);
+
+// Typeface
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+$fontFamily: "Overpass", sans-serif;
+$mainFontSize: 15px;
