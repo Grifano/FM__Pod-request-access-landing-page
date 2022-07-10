@@ -3,10 +3,33 @@ html {
 }
 // Full size webpage
 body {
+  overflow: hidden;
   background-color: $bodyBg;
+  background-image: url("../images/desktop/bg-pattern-dots.svg"),
+    url("../images/desktop/image-host.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 16.111vw, 66.806vw;
+  background-origin: content-box, content-box;
+  background-position: bottom 9.028vw right, top 50% right;
   font-family: $fontFamily;
   height: 100vh;
   box-sizing: border-box;
+  @media (max-width: 991px) {
+    background-image: url("../images/desktop/bg-pattern-dots.svg"),
+      url("../images/tablet/image-host.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-origin: content-box, content-box;
+    background-position: bottom left 40px, top right;
+    background-size: 232px, 491px;
+  }
+  @media (max-width: 475px) {
+    background-image: url("../images/mobile/image-host.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+  }
+}
+main {
 }
 
 // Attribution to author and Frontend Mentor platform
@@ -20,18 +43,19 @@ body {
   padding: 12px;
   height: auto;
   bottom: 40px;
-  left: 40px;
+  right: 40px;
   z-index: 1;
   cursor: pointer;
   border-radius: 12px;
   transition: all 0.3s ease 0s;
   box-shadow: 4px 4px 32px rgba(0, 0, 0, 0.2);
+  transform: scale(0.5);
   filter: blur(2px);
   &:hover {
     filter: blur(0);
     background-color: rgba(255, 255, 255, 1);
     transform: scale(1.5);
-    transform-origin: 40px 40px;
+    transform-origin: 160px 40px;
   }
   &__by {
     color: $attr_span;
@@ -46,6 +70,9 @@ body {
         color: #0061cc;
       }
     }
+  }
+  @media (max-width: 991px) {
+    display: none;
   }
 }
 .grifano-logo {
@@ -62,20 +89,51 @@ body {
 
 // Container
 .container {
-  max-width: 1110px;
-  padding: 32px;
-  @media (max-width: 769px) {
-    padding: 40px;
+  margin-left: 165px;
+  @media (max-width: 768px) {
+    padding: 0 40px;
+    margin: 0;
   }
   @media (max-width: 475px) {
-    padding: 24px;
+    padding: 0 24px;
+  }
+  &__flex {
+    display: flex;
+    flex-direction: column;
   }
 }
 
+// Header
+header {
+  padding-top: 9.028vw;
+  @media (max-width: 991px) {
+    padding-top: 50px;
+  }
+  @media (max-width: 475px) {
+    padding-top: 62px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
 // UI control
 .show {
-  visibility: visible;
-  opacity: 100%;
+  visibility: visible !important;
+  opacity: 100% !important;
+}
+#errorMsg {
+  order: 4;
+  display: block;
+  color: #fb3e3e;
+  font-size: 12px;
+  line-height: 14px;
+  margin-left: 32px;
+  margin-bottom: 8px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+  @media (max-width: 475px) {
+    order: 2;
+  }
 }
 .tooltip {
   visibility: hidden;

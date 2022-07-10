@@ -24,17 +24,80 @@
   </head>
 
   <body>
-    <!-- <header class="header">
-      <div class="container"></div>
-    </header> -->
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo"
+          >Pod Logo <img src="./images/desktop/logo.svg" alt="pod logo"
+        /></a>
+      </div>
+    </header>
 
     <main>
-      Publish your podcasts everywhere. Upload your audio to Pod with a single
-      click. We’ll then distribute your podcast to Spotify, Apple Podcasts,
-      Google Podcasts, Pocket Casts and more! Request access
+      <section class="get-access">
+        <div class="container container__flex">
+          <h1 class="get-access__title">
+            Publish your podcasts <strong>everywhere.</strong>
+          </h1>
+          <p class="get-access__text">
+            Upload your audio to Pod with a single click. We’ll then distribute
+            your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket
+            Casts and more!
+          </p>
+          <form action="#" class="get-access__form" id="form" novalidate>
+            <fieldset form="form">
+              <label for="email">Email</label>
+              <input
+                novalid
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email address"
+              />
+              <small id="errorMsg">Oops! Please check your email</small>
+              <button type="submit">Request Access</button>
+            </fieldset>
+          </form>
+          <ul class="pod-apps">
+            <li>
+              <a href="#" class="pod-apps__links"
+                ><img
+                  src="./images/desktop/spotify.svg"
+                  alt="Spotify logo"
+                />Spotify</a
+              >
+            </li>
+            <li>
+              <a href="#" class="pod-apps__links"
+                ><img
+                  src="./images/desktop/apple-podcast.svg"
+                  alt="Apple Podcast Logo"
+                />Apple Podcast</a
+              >
+            </li>
+            <li>
+              <a href="#" class="pod-apps__links"
+                ><img
+                  src="./images/desktop/google-podcasts.svg"
+                  alt="Google Podcast logo"
+                />Google Podcast</a
+              >
+            </li>
+            <li>
+              <a href="#" class="pod-apps__links"
+                ><img
+                  src="./images/desktop/pocket-casts.svg"
+                  alt="Pocket Casts Logo"
+                />Pocket Casts</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
     <!-- <footer class="footer">
-      <div class="container"></div>
+      <div class="container">
+
+      </div>
     </footer> -->
 
     <!-- Attribution. Author name -->

@@ -14,7 +14,7 @@ $attr_grifano-color: #fff;
 $attr_span: hsl(249, 10%, 26%);
 
 // Typeface
-@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap");
 $fontFamily: "Chivo", sans-serif;
 $mainFontSize: 18px;
 @mixin bodyText {
