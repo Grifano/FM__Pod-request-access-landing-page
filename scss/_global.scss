@@ -120,7 +120,7 @@ header {
   visibility: visible !important;
   opacity: 100% !important;
 }
-#errorMsg {
+.error-msg {
   order: 4;
   display: block;
   color: #fb3e3e;
@@ -133,6 +133,11 @@ header {
   transition: all 0.3s ease 0s;
   @media (max-width: 475px) {
     order: 2;
+  }
+  @media (min-width: 475px) {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
   }
 }
 .tooltip {
