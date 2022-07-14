@@ -42,23 +42,38 @@ Users should be able to:
 
 ### Built with
 
-<!-- - Semantic HTML5 markup
+- Semantic HTML5 markup
 - CSS custom properties
 - SASS/SCSS
+- Regular Expressions
 - JavaScript
+- DOM Manipulation
 - Flexbox
-- Responsive Web Design -->
+- Responsive Web Design
 
 ### What I learned
 
-???
-
-```css
-???
-```
+In this challenge I'm playing with DOM. I try to make some practice with DOM manipulation. setTimeout method was help me to make error-message appearing smoothly.
 
 ```js
-???
+...
+const setErrorMsg = (parent, whatEl, msg, className) => {
+  // Defining the variable and function
+  const newElement = document.createElement(whatEl);
+  newElement.innerText = msg;
+  newElement.classList.add(className);
+  setTimeout(() => {
+    newElement.classList.add("show");
+  }, 100);
+
+  // Procede...
+  if (!form.contains(document.querySelector("small"))) {
+    return parent.appendChild(newElement);
+  }
+};
+
+setErrorMsg(form, "small", "Oops! Please check your email", "error-msg");
+...
 ```
 
 ### Continued development

@@ -12,7 +12,9 @@ const setErrorMsg = (parent, whatEl, msg, className) => {
   }, 100);
 
   // Procede...
-  return parent.appendChild(newElement);
+  if (!form.contains(document.querySelector("small"))) {
+    return parent.appendChild(newElement);
+  }
 };
 
 // Procede...
@@ -21,8 +23,8 @@ form.addEventListener("submit", (e) => {
 
   if (!isValid) {
     e.preventDefault();
-    // errorMsg.className = "show";
-    setErrorMsg(form, "small", "Oops! Please check your email", "error-msg");
+    if (form.hasChildNodes("small"))
+      setErrorMsg(form, "small", "Oops! Please check your email", "error-msg");
   } else {
     e.submit();
   }
